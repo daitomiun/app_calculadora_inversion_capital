@@ -1,30 +1,31 @@
 <div class="center">
-  <h1>Calculadora Basica</h1>
-
+  <h1>Calculadora de inversion a un banco</h1>
+  <p>
+    En esta app puedes simular la inversion de tu capital en un banco y saber
+    cuanto dinero ganaras despues de un mes si el banco paga a razon de 2%
+    mensual o el porcentaje que quieras calcular!
+  </p>
   <form action="result">
     <input
       type="number"
       name="number1"
-      placeholder="Enter first number"
+      onkeyup="oneDot(this)"
+      placeholder="Cantidad de tu capital"
       required
     />
     <br />
     <br />
     <input
       type="number"
-      name="number2"
-      placeholder="Enter second number"
+      name="percentage"
+      placeholder="% Porcentaje Paga a razon mensual"
       required
     />
     <br />
     <br />
-    <button type="submit" name="add">Sumar</button>
-    <button type="submit" name="subtract">Restar</button>
-    <button type="submit" name="multiply">Multiplicar</button>
-    <button type="submit" name="divide">Dividir</button>
+    <button type="submit" name="multiply">Obtener Resultado!</button>
   </form>
 </div>
-
 <style>
   body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -34,5 +35,8 @@
     width: 60%;
     border: 3px solid #a5addb;
     padding: 10px;
+  }
+  input {
+    width: 16rem;
   }
 </style>
